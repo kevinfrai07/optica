@@ -1,0 +1,34 @@
+<?php 
+
+	//plantilla html
+	require_once('vendor/autoload.php');
+	//codigo css plantilla
+
+	require_once('plantillas/page.php');
+
+	require_once('../modelos/crud_basicos.php');
+
+	
+	
+
+	$res=new datosBasicos();
+        	$result=$res->mostrar_datos_basicos();
+
+    $res2=new datosBasicos();
+    		$result2=$res2->mostrar_datos_especificos();
+        	
+    
+
+	$css = file_get_contents('plantillas/style.css');
+
+	$mpdf = new \Mpdf\Mpdf([
+
+	]);
+
+	$plantilla = getPlantilla($result,$result2);
+
+	$mpdf->writeHtml($css, \Mpdf\HTMLParserMode::HEADER_CSS);
+	$mpdf->writeHtml($plantilla, \Mpdf\HTMLParserMode::HTML_BODY);
+	
+	$mpdf->Output();
+ ?>

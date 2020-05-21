@@ -47,7 +47,7 @@
 					<div class="container">
 						<div class="form-row">
 							<div class="form-group col-md-3">
-								<label for="">fecha</label>
+								<label for="">Fecha</label>
 								<input type="date" class="form-control" name="fecha" >
 							</div>
 
@@ -58,7 +58,7 @@
 
 							<div class="form-group col-md-3">
 								<label for="">Digilenciador</label>
-								<select name="diligenciador" id="" class="form-control">
+								<select name="diligenciador" id="" class="form-control" required="">
 									<option selected="">Seleccionar...</option>
 									<option value="Opcion1">Opcion1</option>
 								</select>
@@ -66,36 +66,36 @@
 
 							<div class="form-group col-md-3">
 								<label for="">Comprador</label>
-								<input type="text" class="form-control" name="comprador">
+								<input type="text" class="form-control" name="comprador" required="">
 
 							</div>
 
 							<div class="form-group col-md-3">
 								<label for="inputPassword4">Empresa</label>
-								<input type="text" class="form-control" name="empresa">
+								<input type="text" class="form-control" name="empresa" required="">
 							</div>
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-3">
 								<label for="">Ciudad</label>
-								<select name="ciudad" id="" class="form-control">
+								<select name="ciudad" id="" class="form-control" required="">
 									<option selected="">Seleccionar...</option>
 									<option value="Opcion1">Opcion1</option>
 								</select>
 							</div>
 							<div class="form-group col-md-3">
 								<label for="">Direccion</label>
-								<input type="text" class="form-control"  name="direccion">
+								<input type="text" class="form-control"  name="direccion" required="">
 							</div>
 
 							<div class="form-group col-md-3">
 								<label for="">Correo</label>
-								<input type="email" class="form-control"  name="correo">
+								<input type="email" class="form-control"  name="correo" required="">
 							</div>
 
 							<div class="form-group col-md-3">
 								<label for="">Telefono</label>
-								<input type="text" class="form-control" name="telefono">
+								<input type="text" class="form-control" name="telefono" required="">
 							</div>
 						</div>
 					</div>
@@ -181,21 +181,21 @@
 						<div class="form-group">
 							<div class="form-group col">
 								<label for="">Filtro</label>
-								<select name="filtro" id="" class="form-control">
+								<select name="filtro" id="" class="form-control" required="">
 									<option selected="">Seleccionar...</option>
 									<option value="Opcion1">Opcion1</option>
 								</select>
 							</div>
 							<div class="form-group col">
 								<label for="">Montura</label>
-								<select name="montadura" id="" class="form-control">
+								<select name="montadura" id="" class="form-control" required="">
 									<option selected="">Seleccionar...</option>
 									<option value="Opcion1">Opcion1</option>
 								</select>
 							</div>
 							<div class="form-group col">
 								<label for="tipo_talla">Tipo de talla</label>
-								<select name="tipo_talla" id="" class="form-control">
+								<select name="tipo_talla" id="" class="form-control" required="">
 									<option selected="">Seleccionar...</option>
 									<option value="Opcion1">Opcion1</option>
 								</select>
@@ -270,7 +270,34 @@
 						<br>
 						<textarea name="otras_observaciones" id="" cols="10" rows="5" class="form-control"></textarea>
 					</div>
-					<input type="submit" name="btnEnviar" value="enviar">
+					
+
+					<!-- boton de alerta -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+						Enviar
+					</button>
+
+					<!-- cuerpo del boton alerta -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h2 class="text-center">!Alerta!</h2>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<h3 class="text-center">Desea Enviar el Formulario</h3>
+								</div>
+								<div class="modal-footer">
+									<input type="submit" name="btnEnviar" value="Aceptar" class="btn btn-primary">
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
 				</form><!--termina el unico form-->
 			</div>
 		</div>
