@@ -1,53 +1,49 @@
-
-
 .container-fluid {
     background-color: #5cf3fe;
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
 h3{
 	color: #227893;
 }
-
 .fondo::-webkit-scrollbar {
 	width: 8px;
 }
-
 .fondo::-webkit-scrollbar-thumb {
 	background: #227893;
 	border-radius: 5px;
 }
-
-
-
-
-
 .fondo {
 	position: relative;
 	width: 300px;
 	height: 90%;
-	
-	
 	background: #fff;
 	overflow: scroll;
-
-	
 }
-
 .ayuda{
 	position: absolute;
     top: 1%;
     right: 1%
 }
-
 .enviar{
 	position: absolute;
     top: 100%;
     right: 1%
 }
+.color-container{
+	background-color: #e9ecef;
+}
+.color-container-der{
+	background-color: #e9ecef; 
+}
+.banner-izq{
 
+}
+.img-izq{
+	width: 100%;
+	height: 90%;
+}
 
 
 
