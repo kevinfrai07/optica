@@ -60,7 +60,7 @@ $plantilla = '<body>
         
       
        $plantilla .='<tr>
-          <td class="">'.$result2[$i]["esf1"].'</td>
+          <p>'.$result2[$i]["esf1"].'</p>
           <td class="">'.$result2[$i]["cil1"].'</td>
           <td class="">'.$result2[$i]["eje1"].'</td>
           <td class="">'.$result2[$i]["add1"].'</td>
