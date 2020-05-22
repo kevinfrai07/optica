@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="diseno/css/styles.css">
 	<?php 
 	require_once 'diseno/estilos.php';
+	
 
 	?>
 	
