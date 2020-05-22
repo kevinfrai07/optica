@@ -12,13 +12,23 @@
 
 		{
 			$sql=$this->conexion->query("INSERT INTO datos_basicos VALUES(null, '$fecha', '$hora', '$diligenciador', '$comprador', '$empresa', '$ciudad', '$direccion', '$correo', '$telefono')");
+			$maxid1=last_insert_id(); 
+				
+			print_r($sql);
+			die();
 
 			$sql2=$this->conexion->query("INSERT INTO formula_datos_especificos VALUES(null, '$esf1', '$cil1', '$eje1', '$add1', '$tipo_lente', '$esf2', '$cil2', '$eje2', '$add2', '$tipo_lente2', ' $filtro', '$montadura', '$tipo_talla')");
 
+			$maxid2=$this->conexion->query("SELECT MAX(id_datos_basicos AS id FROM )");
+
 			$sql3=$this->conexion->query("INSERT INTO talla_observaciones VALUES (null, '$fecha1', '$diagonal', '$dnp', '$dv', '$filtro2', '$vertical', '$puente', '$altura_focal', '$dt', '$color', '$dtrabajo', '$pant', '$observaciones', '$otras_observaciones')");
+			$maxid3=$this->conexion->query("SELECT MAX(id_datos_basicos AS id FROM )");
+
+
 			echo "<script >alert('Datos enviados con éxito');
 					window.location='../index.php';
 					</script>"; 
+
 				
 		}
 
@@ -36,5 +46,8 @@
 
 			return $req;
 		}
+		
+
+
 	}
  ?>
