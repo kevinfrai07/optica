@@ -12,10 +12,8 @@
 
 		{
 			$sql=$this->conexion->query("INSERT INTO datos_basicos VALUES(null, '$fecha', '$hora', '$diligenciador', '$comprador', '$empresa', '$ciudad', '$direccion', '$correo', '$telefono')");
-			$maxid1=last_insert_id(); 
-				
-			print_r($sql);
-			die();
+			$maxid1=$this->conexion->query("SELECT MAX(id_datos_basicos) AS id FROM datos_basicos )");
+			
 
 			$sql2=$this->conexion->query("INSERT INTO formula_datos_especificos VALUES(null, '$esf1', '$cil1', '$eje1', '$add1', '$tipo_lente', '$esf2', '$cil2', '$eje2', '$add2', '$tipo_lente2', ' $filtro', '$montadura', '$tipo_talla')");
 
