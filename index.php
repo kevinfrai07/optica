@@ -13,10 +13,10 @@
 	<meta charset="UTF-8">
 	<title>Home</title>
 </head>
-<body class="body">
+<body class="">
 	<div class="container-fluid" ><!-- este container termina hasta el final-->
 		<div class="row" >
-			<div class="col-sm-4 color-container "><!--inicio del recuadro imagenes-->
+			<div class="col-4 color-container "><!--inicio del recuadro imagenes-->
 				<div class="pantalla">
 					<img src="imagenes/logos/logo.jpg" class="card-img-top">
 					<div class="container">
@@ -39,12 +39,19 @@
 							<div class="col-sm-6 my-1">
 								<img src="imagenes/logos/img1.jpg" alt="" class="img-izq">
 							</div>
+							<div class="col-sm-6 my-1">
+								<img src="imagenes/logos/img1.jpg" alt="" class="img-izq">
+							</div>
+							<div class="col-sm-6 my-1">
+								<img src="imagenes/logos/img1.jpg" alt="" class="img-izq">
+							</div>
+
 						</div>
 					</div><!--termina la parte de las imagenes-->
 				</div>
 			</div>
 			<!--inica el fromulario -->
-			<div class="col-lg-8" id="">
+			<div class="col-8">
 				<div class="pantalla">
 					<h2 class="text-center">Relizar pedido</h2>
 					<!--boton ayuda-->
@@ -301,7 +308,7 @@
 	</div>
 </body>
 </html>
-<script>
+<!--<script>
 	$(document).ready(function($){
 		var ventana_ancho = $(window).width();
 		var ventana_alto = $(window).height();
@@ -310,7 +317,7 @@
 		$('.color-container-der').css('height',height+'px !important');
 		$('.color-container-der').css('max-width',height+'px !important');
 	});
-</script>
+</script>-->
 
 
 <!-- cuerpo del boton ayuda -->
