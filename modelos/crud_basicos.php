@@ -44,6 +44,13 @@
 
 			return $req;
 		}
+
+		function mostrar_observaciones(){
+			$sql5=$this->conexion->query("SELECT * FROM talla_observaciones");
+			$req=$sql5->fetch_all(MYSQLI_ASSOC);
+
+			return $req;
+		}
 		
 
 

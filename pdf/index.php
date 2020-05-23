@@ -18,6 +18,9 @@
 
     $res2=new datosBasicos();
     		$result2=$res2->mostrar_datos_especificos();
+
+    $res3=new datosBasicos();
+    		$result3=$res3->mostrar_observaciones();
         	
     
 
@@ -28,7 +31,7 @@
 
 	]);
 	
-	$plantilla = getPlantilla($result,$result2);
+	$plantilla = getPlantilla($result,$result2,$result3);
 	$mpdf->writeHtml($css, \Mpdf\HTMLParserMode::HEADER_CSS);
 	$mpdf->writeHtml($plantilla, \Mpdf\HTMLParserMode::HTML_BODY);
 	
