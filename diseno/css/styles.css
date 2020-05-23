@@ -3,7 +3,7 @@ body{
 }
 
 .container-fluid {
-    background-color: #5cf3fe;
+    background-color: #A6E4F7;
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -16,28 +16,19 @@ h3{
 	height: 8px;  
 }
 
-
-
-
 .color-container{
 	
 	background-color: #e9ecef;
 	 width: 92.3%;
-    height: 90%;
     overflow: scroll;
-    position: absolute;
+    position: fixed;
 }
 .color-container-der{
 	background-color: #e9ecef; 
 	background-color: #e9ecef;
 	 width: 92.3%;
-    height: 50%;
 	overflow: scroll;
 	position: absolute;
-	
-	
-	
-
 }
 
 .img-izq{
@@ -45,7 +36,23 @@ h3{
 	height: 90%;
 }
 
+.imgenviar{
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+	border: none;
 
+}
+.imgayuda{
+	width: 30px;
+	height: 30px;
+	text-decoration: none;
+	border: none;
+
+}
+.btnup{
+	margin-top: -40px !important;
+}
 
 
 
