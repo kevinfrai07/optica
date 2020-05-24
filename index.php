@@ -10,6 +10,9 @@
 
 	<meta charset="UTF-8">
 	<title>Home</title>
+	
+
+
 </head>
 <body class="">
 	<div class="container-fluid" ><!-- este container termina hasta el final-->
@@ -45,114 +48,150 @@
 					</a>
 				</div>
 				<form action="controlador/insert_todo.php" method="POST" class="color-container-der">
-					<h3 class="mx-2">Datos esenciales</h3>
-					<div class="container">
-						<div class="form-row">
-							<div class="form-group col-md-3">
-								<label for="">Fecha</label>
-								<input type="date" class="form-control" name="fecha" >
-							</div>
-
-							<div class="form-group col-md-2">
-								<label for="inputEmail4">Hora</label>
-								<input type="time" class="form-control">
-							</div>
-
-							<div class="form-group col-md-2">
-								<label for="">Digilenciador*</label>
-								<input type="text" name="diligenciador" class="form-control" placeholder="Digilenciador">
-							</div>
-
-							<div class="form-group col-md-2">
-								<label for="">Comprador*</label>
-								<input type="text" class="form-control" name="comprador" required="" placeholder="Comprador">
-
-							</div>
-
-							<div class="form-group col-md-3">
-								<label for="inputPassword4">Empresa*</label>
-								<input type="text" class="form-control" name="empresa" required="" placeholder="Empresa">
-							</div>
+					<!--inicia el acordion-->
+					<div class="accordion" id="accordionExample">
+						<!--opcion 1 ------->
+						<div class="card">
+							<div class="card-header" id="headingOne">
+								<h3 class="mb-0">
+									<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+									aria-expanded="true" aria-controls="collapseOne">
+									Datos esenciales
+								</button>
+							</h3>
 						</div>
-						<div class="form-row">
-							<div class="form-group col-md-2">
-								<label for="">Ciudad*</label>
-								<input type="text" name="ciudad" class="form-control" placeholder="Ciudad">
-							</div>
-							<div class="form-group col-md-3">
-								<label for="">Dirección*</label>
-								<input type="text" class="form-control"  name="direccion" required="" placeholder="Dirección">
-							</div>
+						<!--termina el primer boton-->
+						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+							<div class="container">
+								<div class="form-row">
+									<div class="form-group col-md-3">
+										<label for="">Fecha</label>
+										<input type="date" class="form-control" name="fecha" >
+									</div>
 
-							<div class="form-group col-md-3">
-								<label for="">Correo electrónico*</label>
-								<input type="email" class="form-control"  name="correo" required="" placeholder="Correo electrónico">
-							</div>
+									<div class="form-group col-md-2">
+										<label for="inputEmail4">Hora</label>
+										<input type="time"  name="hora"  class="form-control" value="<?php echo date('g:i:s.a.') ?>">
+									</div>
 
-							<div class="form-group col-md-3">
-								<label for="">Teléfono*</label>
-								<input type="text" class="form-control" name="telefono" required="" placeholder="Teléfono">
+									<div class="form-group col-md-2">
+										<label for="">Digilenciador*</label>
+										<input type="text" name="diligenciador" class="form-control" placeholder="Digilenciador">
+									</div>
+
+									<div class="form-group col-md-2">
+										<label for="">Comprador*</label>
+										<input type="text" class="form-control" name="comprador" required="" placeholder="Comprador">
+
+									</div>
+
+									<div class="form-group col-md-3">
+										<label for="inputPassword4">Empresa*</label>
+										<input type="text" class="form-control" name="empresa" required="" placeholder="Empresa">
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-2">
+										<label for="">Ciudad*</label>
+										<input type="text" name="ciudad" class="form-control" placeholder="Ciudad">
+									</div>
+									<div class="form-group col-md-3">
+										<label for="">Dirección*</label>
+										<input type="text" class="form-control"  name="direccion" required="" placeholder="Dirección">
+									</div>
+
+									<div class="form-group col-md-3">
+										<label for="">Correo electrónico*</label>
+										<input type="email" class="form-control"  name="correo" required="" placeholder="Correo electrónico">
+									</div>
+
+									<div class="form-group col-md-3">
+										<label for="">Teléfono*</label>
+										<input type="text" class="form-control" name="telefono" required="" placeholder="Teléfono">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<hr>
+					
 					<!---------------------------------------------------- formula --------------------------------------------------------->
-					<h3 class="mx-2">Fórmula</h3>
-					<div class="container">
-						<div class="form-row">
-							<div class="form-group col-md-2">
-								<label for="">ESF</label>
-								<input type="text" name="esf1" class="form-control" placeholder="ESF">
+					<div class="card">
+						<!--segundo boton-->
+						<div class="card-header" id="headingThree">
+							<h3 class="mb-0">
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+								aria-expanded="false" aria-controls="collapseTwo">
+								Fórmula
+							</button>
+						</h3>
+					</div>
+					
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+						<div class="container">
+							<div class="form-row">
+								<div class="form-group col-md-1">
+									<label for="">ESF</label>
+									<input type="number" name="esf1" class="form-control" placeholder="ESF" min="-10" max="10">
+								</div>
+								<div class="form-group col-md-1">
+									<label for="inputEmail4">CIL</label>
+									<input type="number" name="cil1" class="form-control" placeholder="CIL" min="-10" max="10">
+								</div>
+								<div class="form-group col-md-1">
+									<label for="">EJE</label>
+									<input type="number" name="eje1" class="form-control" placeholder="EJE" min="-10" max="10">
+								</div>
+								<div class="form-group col-md-1">
+									<label for="">ADD</label>
+									<input type="number" name="add1" class="form-control" placeholder="ADD" min="-10" max="10">
+								</div>
+								<div class="form-group col-md-8">
+									<label for="">Tipo de lente </label>
+									<select name="tipo_lente1" id="" class="form-control">
+										<option selected="">Tipo de lente...</option>
+										<option value="Progresivo blanco image">Progresivo blanco Image</option>
+										<option value="Progresivo transition 8 generacion">Progresivo transition 8 Generación</option>
+										<option value="Progresivo transltion 8 generacion">Bifocal flat top</option>
+									</select>
+								</div>
 							</div>
-							<div class="form-group col-md-2">
-								<label for="inputEmail4">CIL</label>
-								<input type="text" name="cil1" class="form-control" placeholder="CIL">
-							</div>
-							<div class="form-group col-md-2">
-								<label for="">EJE</label>
-								<input type="text" name="eje1" class="form-control" placeholder="EJE">
-							</div>
-							<div class="form-group col-md-3">
-								<label for="">ADD</label>
-								<input type="text" name="add1" class="form-control" placeholder="ADD">
-							</div>
-							<div class="form-group col-md-3">
-								<label for="">Tipo de lente </label>
-								<select name="tipo_lente1" id="" class="form-control">
-									<option selected="">Tipo de lente...</option>
-									<option value="Progresivo blanco image">Progresivo blanco Image</option>
-									<option value="Progresivo transition 8 generacion">Progresivo transition 8 Generación</option>
-									<option value="Progresivo transltion 8 generacion">Bifocal flat top</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-row">
-							<div class="form-group col-md-2">
-								<input type="text" name="esf2" class="form-control" placeholder="ESF">
-							</div>
-							<div class="form-group col-md-2">
-								<input type="text" name="cil2" class="form-control" placeholder="CIL">
-							</div>
-							<div class="form-group col-md-2">
-								<input type="text" class="form-control" name="eje2" placeholder="EJE">
-							</div>
-							<div class="form-group col-md-3">
-								<input type="text" name="add2" class="form-control" placeholder="ADD">
-							</div>
-							<div class="form-group col-md-3">
-								<select name="tipo_lente2" class="form-control" id="">
-									<option selected="">Tipo de lente</option>
-									<option value="Progresivo blanco image">Progresivo blanco Image</option>
-									<option value="Progresivo transition 8 generacion">Progresivo transition 8 Generación</option>
-									<option value="Progresivo transltion 8 generacion">Bifocal flat top</option>
-								</select>
+							<div class="form-row">
+								<div class="form-group col-md-1">
+									<input type="number" name="esf2" class="form-control" placeholder="ESF" min="-10" max="10">
+								</div>
+								<div class="form-group col-md-1">
+									<input type="number" name="cil2" class="form-control" placeholder="CIL" min="-10" max="10">
+								</div>
+								<div class="form-group col-md-1">
+									<input type="number" class="form-control" name="eje2" placeholder="EJE" min="-10" max="10">
+								</div>
+								<div class="form-group col-md-1">
+									<input type="number" name="add2" class="form-control" placeholder="ADD" min="-10" max="10">
+								</div>
+								<div class="form-group col-md-8">
+									<select name="tipo_lente2" class="form-control" id="">
+										<option selected="">Tipo de lente</option>
+										<option value="Progresivo blanco image">Progresivo blanco Image</option>
+										<option value="Progresivo transition 8 generacion">Progresivo transition 8 Generación</option>
+										<option value="Progresivo transltion 8 generacion">Bifocal flat top</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
-					<!--termina el menu-->
-					<hr>
-					<h3 class="mx-2">Datos específicos</h3>
-
+				</div>
+				<!--termina el menu-->
+				<div class="card">
+					<!--tercer boton-->
+					<div class="card-header" id="headingThree">
+						<h3 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+							aria-expanded="false" aria-controls="collapseThree">
+							Datos específicos
+						</button>
+					</h3>
+				</div>
+				<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
 					<div class="container">
 						<div class="form-group">
 							<div class="form-group col">
@@ -182,109 +221,134 @@
 								</select>
 							</div>
 						</div>
-					</div>	
-					<!--------------------------------- DATOS TALLA ---------------------------------------->
-					<hr>
-					<h3 class="mx-2">Datos de talla</h3>
-					<div class="container">
-						<div class="form-row">
-							<div class="form-group col-md-2">
-								<label for="">Fecha</label>
-								<input type="text" name="fecha1" class="form-control" placeholder="Horizontal">
-							</div>
-							<div class="form-group col-md-2">
-								<label for="">Diagonal</label>
-								<input type="text" name="diagonal" class="form-control" placeholder="Diagonal">
-							</div>
-							<div class="form-group col-md-2">
-								<label for="">DNP</label>
-								<input type="text" name="dnp" class="form-control" placeholder="DNP">
-							</div>
-							<div class="form-group col-md-2">
-								<label for="">DV</label>
-								<input type="text" name="dv" class="form-control" placeholder="DV">
-							</div>
-							<div class="form-group col-md-2">
-								<label for="">Filtro</label>
-								<input type="text" name="filtro2" class="form-control" placeholder="Filtro">
-							</div>
-							<div class="form-group col-md-2">
-								<label for="">Vertical</label>
-								<input type="text" name="vertical" class="form-control" placeholder="Vertical">
-							</div>
-							<div class="form-group col-md-2">
-								<label for="">Puente</label>
-								<input type="text" name="puente" class="form-control" placeholder="Puente">
-							</div>
-							<div class="form-group col-md-2">
-								<label for="">Altura focal</label>
-								<input type="text" name="altura_focal" class="form-control" placeholder="Altura focal">
-							</div>
-
-
-
-							<div class="form-group col-md-2">
-								<label for="">DT</label>
-								<input type="text" name="dt" class="form-control" placeholder="DT">
-							</div>
-							<div class="form-group col-md-2">
-								<label for="">Color</label>
-								<input type="text" name="color" class="form-control" placeholder="Color">
-							</div>
-							<div class="form-group col-md-2">
-								<label for="">D.Trabajo</label>
-								<input type="text" name="dtrabajo" class="form-control" placeholder="D.Trabajo">
-							</div>
-							<div class="form-group col-md-2">
-								<label for="">PANT</label>
-								<input type="text" name="pant" class="form-control" placeholder="PANT">
-							</div>
-						</div>
 					</div>
-					<hr>
-					<h3 class="mx-2">Observaciones</h3>
-					<div class="container">
-						<select name="observaciones" id="" class="form-control">
-							<option selected="">Elige las observaciones</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-						</select>
-						<br>
-						<textarea name="otras_observaciones" id="" cols="10" rows="5" class="form-control" placeholder="Otras observaciones"></textarea>
-					</div>
-
-
-					<!-- boton de alerta -->
-					<button type="button" class="float-right imgenviar" data-toggle="modal" data-target="#exampleModal">
-						<img class="imgenviar" src="imagenes/logos/enviar.png" alt="">
+				</div>	
+			</div>
+			<!--------------------------------- DATOS TALLA ---------------------------------------->
+			<div class="card">
+				<div class="card-header" id="headingFour">
+					<h3 class="mx-2">
+						<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+						aria-expanded="false" aria-controls="collapseFour">
+						Datos de talla
 					</button>
-
-					<!-- cuerpo del boton alerta -->
-					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h2 class="text-center">Alerta!</h2>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<h3 class="text-center">Desea Enviar el Formulario</h3>
-								</div>
-								<div class="modal-footer">
-									<input type="submit" name="btnEnviar" value="Aceptar" class="btn btn-primary" >
-									<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-
-								</div>
-							</div>
+				</h3>
+			</div>
+			<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+				<div class="container">
+					<div class="form-row">
+						<div class="form-group col-md-2">
+							<label for="">Fecha</label>
+							<input type="text" name="fecha1" class="form-control" placeholder="Horizontal">
 						</div>
-					</div><!--termina cuerpo boton alerta-->
-				</form><!--termina el unico form-->
+						<div class="form-group col-md-2">
+							<label for="">Diagonal</label>
+							<input type="text" name="diagonal" class="form-control" placeholder="Diagonal">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="">DNP</label>
+							<input type="text" name="dnp" class="form-control" placeholder="DNP">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="">DV</label>
+							<input type="text" name="dv" class="form-control" placeholder="DV">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="">Filtro</label>
+							<input type="text" name="filtro2" class="form-control" placeholder="Filtro">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="">Vertical</label>
+							<input type="text" name="vertical" class="form-control" placeholder="Vertical">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="">Puente</label>
+							<input type="text" name="puente" class="form-control" placeholder="Puente">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="">Altura focal</label>
+							<input type="text" name="altura_focal" class="form-control" placeholder="Altura focal">
+						</div>
+
+
+
+						<div class="form-group col-md-2">
+							<label for="">DT</label>
+							<input type="text" name="dt" class="form-control" placeholder="DT">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="">Color</label>
+							<input type="text" name="color" class="form-control" placeholder="Color">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="">D.Trabajo</label>
+							<input type="text" name="dtrabajo" class="form-control" placeholder="D.Trabajo">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="">PANT</label>
+							<input type="text" name="pant" class="form-control" placeholder="PANT">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+		<!--inician las observaciones-->
+		<div class="card">
+			<div class="card-header" id="headingFive">
+				<h3 class="mx-2">
+					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+					aria-expanded="false" aria-controls="collapseFive">
+					Observaciones
+				</button>
+			</h3>
+		</div>
+		<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+			<div class="container">
+				<select name="observaciones" id="" class="form-control">
+					<option selected="">Elige las observaciones</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+				<br>
+				<textarea name="otras_observaciones" id="" cols="10" rows="5" class="form-control" placeholder="Otras observaciones"></textarea>
+			</div>
+
+
+			<!-- boton de alerta -->
+			<button type="button" class="float-right imgenviar" data-toggle="modal" data-target="#exampleModal">
+				<img class="imgenviar" src="imagenes/logos/enviar.png" alt="">
+			</button>
+
+
+			<!-- cuerpo del boton alerta -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="text-center">Alerta!</h2>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<h3 class="text-center">Desea Enviar el Formulario</h3>
+						</div>
+						<div class="modal-footer">
+							<input type="submit" name="btnEnviar" value="Aceptar" class="btn btn-primary" >
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+
+						</div>
+					</div>
+				</div>
+			</div><!--termina cuerpo boton alerta-->
+		</div>
 	</div>
+</div><!--termina el acordion-->
+</form><!--termina el unico form-->
+</div>
+</div>
+</div>
 </body>
 </html>
 <script>

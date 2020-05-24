@@ -4,10 +4,6 @@
   clear: both;
 }
 
-a {
-  color: #5D6975;
-  text-decoration: underline;
-}
 
 body {
   position: relative;
@@ -27,12 +23,15 @@ header {
 }
 
 #logo {
-  text-align: center;
-  margin-bottom: 10px;
+  
+  margin-bottom: -100px;
 }
 
 #logo img {
-  width: 90px;
+  width: 10px;
+}
+div{
+  display: block;
 }
 
 h1 {
@@ -43,7 +42,7 @@ h1 {
   line-height: 1.4em;
   font-weight: normal;
   text-align: center;
-  margin: 0 0 20px 0;
+  
   background: url(dimension.png);
 }
 
@@ -52,12 +51,11 @@ h1 {
 }
 
 #project span {
-  color: #5D6975;
   text-align: right;
   width: 52px;
   margin-right: 10px;
   display: inline-block;
-  font-size: 0.8em;
+  font-size: 14px;
 }
 
 #company {
