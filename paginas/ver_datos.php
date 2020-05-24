@@ -43,7 +43,7 @@
       <td><?php echo $result[$i]['direccion'] ?></td>
       <td><?php echo $result[$i]['correo']; ?></td>
       <td><?php echo $result[$i]['telefono']; ?></td>
-      <td><a href="" class="pdf"><i class="far fa-file-pdf"></i></a></td>
+      <td><a href="../pdf" ><i class="far fa-file-pdf" style="color: red;"></i></a></td>
     </tr>
     <?php } 
     ?>
