@@ -1,8 +1,7 @@
 
 <?php 
 require_once("../modelos/crud_basicos.php");
-
-function getPlantilla($result, $result2, $result3){
+function getPlantilla($result){
 
 $plantilla = '<body>
   <header class="clearfix">
@@ -10,8 +9,7 @@ $plantilla = '<body>
       <img src="img/logos.jpg">
     </div>
     <div id="project">';
-    $res=new datosBasicos();
-          $result=$res->mostrar_datos_basicos();
+    
       for($i=0; $i <count($result) ; $i++) {
        $plantilla .='<div id="company"><span>Fecha : </span>'.$result[$i]["fecha"].'</div>
       <div id="company"><span>Hora : </span>'.$result[$i]["hora"].'</div>
@@ -37,16 +35,15 @@ $plantilla = '<body>
         </tr>
       </thead>
       <tbody>';
-      $res2=new datosBasicos();
-        $result2=$res2->mostrar_datos_especificos();  
-      for ($i=0; $i <count($result2 ) ; $i++) { 
+
+      for ($i=0; $i <count($result) ; $i++) { 
       
        $plantilla .='<tr>
-          <td class="service">'.$result2[$i]["esf1"].'</td>
-          <td class="service">'.$result2[$i]["cil1"].'</td>
-          <td class="service">'.$result2[$i]["eje1"].'</td>
-          <td class="service">'.$result2[$i]["add1"].'</td>
-          <td class="service">'.$result2[$i]["tipo_lente1"].'</td>
+          <td class="service">'.$result[$i]["esf1"].'</td>
+          <td class="service">'.$result[$i]["cil1"].'</td>
+          <td class="service">'.$result[$i]["eje1"].'</td>
+          <td class="service">'.$result[$i]["add1"].'</td>
+          <td class="service">'.$result[$i]["tipo_lente1"].'</td>
         </tr>';
         }
       $plantilla .='</tbody>
@@ -67,16 +64,15 @@ $plantilla = '<body>
       </thead>
       <tbody>';
       
-      $res2=new datosBasicos();
-        $result2=$res2->mostrar_datos_especificos();  
-      for ($i=0; $i <count($result2 ) ; $i++) { 
+  
+      for ($i=0; $i <count($result) ; $i++) { 
       
        $plantilla .='<tr>
-          <td class="service">'.$result2[$i]["esf1"].'</td>
-          <td class="service">'.$result2[$i]["cil1"].'</td>
-          <td class="service">'.$result2[$i]["eje1"].'</td>
-          <td class="service">'.$result2[$i]["add1"].'</td>
-          <td class="service">'.$result2[$i]["tipo_lente1"].'</td>
+          <td class="service">'.$result[$i]["esf1"].'</td>
+          <td class="service">'.$result[$i]["cil1"].'</td>
+          <td class="service">'.$result[$i]["eje1"].'</td>
+          <td class="service">'.$result[$i]["add1"].'</td>
+          <td class="service">'.$result[$i]["tipo_lente1"].'</td>
         </tr>';
         }
       $plantilla .='</tbody>
@@ -93,15 +89,13 @@ $plantilla = '<body>
         </tr>
       </thead>
       <tbody>';
-      
-      $res2=new datosBasicos();
-        $result2=$res2->mostrar_datos_especificos();  
-      for ($i=0; $i <count($result2 ) ; $i++) { 
+        
+      for ($i=0; $i <count($result) ; $i++) { 
     
        $plantilla .='<tr>
-          <td class="service">'.$result2[$i]["filtro"].'</td>
-          <td class="service">'.$result2[$i]["montadura"].'</td>
-          <td class="service">'.$result2[$i]["tipo_talla"].'</td>
+          <td class="service">'.$result[$i]["filtro"].'</td>
+          <td class="service">'.$result[$i]["montadura"].'</td>
+          <td class="service">'.$result[$i]["tipo_talla"].'</td>
         </tr>';
         }
       $plantilla .='</tbody>
@@ -123,17 +117,15 @@ $plantilla = '<body>
       </thead>
       <tbody>';
       
-      $res3=new datosBasicos();
-        $result3=$res3->mostrar_observaciones();  
-      for ($i=0; $i <count($result3 ) ; $i++) { 
+      for ($i=0; $i <count($result) ; $i++) { 
     
        $plantilla .='<tr>
-          <td class="service">'.$result3[$i]["fecha"].'</td>
-          <td class="service">'.$result3[$i]["diagonal"].'</td>
-          <td class="service">'.$result3[$i]["dnp"].'</td>
-           <td class="service">'.$result3[$i]["dv"].'</td>
-           <td class="service">'.$result3[$i]["filtro"].'</td>
-           <td class="service">'.$result3[$i]["vertical"].'</td>
+          <td class="service">'.$result[$i]["fecha"].'</td>
+          <td class="service">'.$result[$i]["diagonal"].'</td>
+          <td class="service">'.$result[$i]["dnp"].'</td>
+           <td class="service">'.$result[$i]["dv"].'</td>
+           <td class="service">'.$result[$i]["filtro"].'</td>
+           <td class="service">'.$result[$i]["vertical"].'</td>
         </tr>';
         }
       $plantilla .='</tbody>
@@ -155,20 +147,17 @@ $plantilla = '<body>
         </tr>
       </thead>
       <tbody>';
-      
-      $res3=new datosBasicos();
-        $result3=$res3->mostrar_observaciones();  
-      for ($i=0; $i <count($result3 ) ; $i++) { 
+      for ($i=0; $i <count($result) ; $i++) { 
     
        $plantilla .='<tr>
-          <td >'.$result3[$i]["puente"].'</td>
-          <td >'.$result3[$i]["altrura_focal"].'</td>
-          <td >'.$result3[$i]["dt"].'</td>
-          <td >'.$result3[$i]["color"].'</td>
-          <td >'.$result3[$i]["dtrabajo"].'</td>
-          <td >'.$result3[$i]["pant"].'</td>
-          <td >'.$result3[$i]["observaciones"].'</td>
-          <td >'.$result3[$i]["otras_observaciones"].'</td>
+          <td >'.$result[$i]["puente"].'</td>
+          <td >'.$result[$i]["altrura_focal"].'</td>
+          <td >'.$result[$i]["dt"].'</td>
+          <td >'.$result[$i]["color"].'</td>
+          <td >'.$result[$i]["dtrabajo"].'</td>
+          <td >'.$result[$i]["pant"].'</td>
+          <td >'.$result[$i]["observaciones"].'</td>
+          <td >'.$result[$i]["otras_observaciones"].'</td>
         </tr>';
         }
       $plantilla .='</tbody>

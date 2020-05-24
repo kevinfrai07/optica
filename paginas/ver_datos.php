@@ -1,13 +1,13 @@
 <?php 
-	require_once '../diseno/estilos_2.php';
+require_once '../diseno/estilos_2.php';
 
- ?>
- <link rel="stylesheet" href="..diseno/css/styles.css">
- <link rel="stylesheet" href="../diseno/fontawesome/css/all.css">
+?>
+<link rel="stylesheet" href="..diseno/css/styles.css">
+<link rel="stylesheet" href="../diseno/fontawesome/css/all.css">
 <link rel="stylesheet" href="../diseno/datatables/datatables.min.css">
 <link rel="stylesheet" href="../diseno/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="../diseno/main.css">
-
+<div class="container">
  <table class="table" id="example" class="table table-striped table-bordered">
   <thead>
     <tr>
@@ -26,15 +26,15 @@
   <tbody>
 
     <?php 
-      require_once '../modelos/crud_basicos.php';
-      $res=new datosBasicos();
-      $result=$res->mostrar_datos_basicos();
-      for ($i=0; $i <count($result) ; $i++) { 
-        
-      
+    require_once '../modelos/crud_basicos.php';
+    $res=new datosBasicos();
+    $result=$res->mostrar_datos_basicos();
+    for ($i=0; $i <count($result) ; $i++) { 
+
+
      ?>
-    <tr>
-      <th scope="row">1</th>
+     <tr>
+      <td><?php echo $result[$i]['id_datos_basicos']?></td>
       <td><?php echo $result[$i]['fecha']?>   <?php echo $result[$i]['hora']; ?></td>
       <td><?php echo $result[$i]['diligenciador']; ?></td>
       <td><?php echo $result[$i]['comprador']; ?></td>
@@ -43,13 +43,13 @@
       <td><?php echo $result[$i]['direccion'] ?></td>
       <td><?php echo $result[$i]['correo']; ?></td>
       <td><?php echo $result[$i]['telefono']; ?></td>
-      <td><a href="../pdf" ><i class="far fa-file-pdf" style="color: red;"></i></a></td>
+      <td><a href="../pdf?id=<?php echo $result[$i]['id_datos_basicos']?>" target="_blank"><i class="far fa-file-pdf" style="color: red;"></i></a></td>
     </tr>
-    <?php } 
-    ?>
-  </tbody>
+  <?php } 
+  ?>
+</tbody>
 </table>
-
+</div>
 <script src="../diseno/jquery/jquery-3.3.1.min.js"></script>
 <script src="../diseno/popper/popper.min.js"></script>
 <script type="text/javascript" src="../diseno/datatables/datatables.min.js"></script>     

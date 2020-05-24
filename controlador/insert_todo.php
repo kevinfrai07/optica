@@ -4,8 +4,8 @@
 
 	if (isset($_POST['btnEnviar'])) {
 		
-		$fecha=$_POST['fecha'];
-		$hora=$_POST['hora'];
+		$fecha=date('yyyy-mm-dd');
+		$hora=date('hh-mm-ss');
 		$diligenciador=$_POST['diligenciador'];
 		$comprador=$_POST['comprador'];
 		$empresa=$_POST['empresa'];

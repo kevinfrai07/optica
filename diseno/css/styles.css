@@ -1,5 +1,5 @@
 body{
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 
 .container-fluid {
@@ -7,6 +7,10 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+#color-container-acordeon{
+    background-color: #fff;
+
 }
 h3{
 	color: #227893;
@@ -25,10 +29,9 @@ h3{
     position: fixed;
 }
 .color-container-der{
-	background-color: #e9ecef; 
-	background-color: #e9ecef;
-	 width: 92.3%;
-	overflow: scroll;
+	width: 95%;
+	overflow-x: none;
+	overflow-y: none;
 	position: absolute;
 }
 
@@ -42,7 +45,7 @@ h3{
 	height: 50px;
 	text-decoration: none;
 	border: none;
-
+	background-color: #fff;
 }
 .imgayuda{
 	width: 30px;
