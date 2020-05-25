@@ -120,7 +120,11 @@ $plantilla = '<body>
       for ($i=0; $i <count($result) ; $i++) { 
     
        $plantilla .='<tr>
+<<<<<<< HEAD
           <td class="service">'.$result[$i]["horizontal"].'</td>
+=======
+          <td class="service">'.$result[$i]["fecha1"].'</td>
+>>>>>>> 3e4cf87ea7b2581421d82fffda947bef64d3c97e
           <td class="service">'.$result[$i]["diagonal"].'</td>
           <td class="service">'.$result[$i]["dnp"].'</td>
            <td class="service">'.$result[$i]["dv"].'</td>
