@@ -120,7 +120,7 @@ $plantilla = '<body>
       for ($i=0; $i <count($result) ; $i++) { 
     
        $plantilla .='<tr>
-          <td class="service">'.$result[$i]["fecha"].'</td>
+          <td class="service">'.$result[$i]["fecha1"].'</td>
           <td class="service">'.$result[$i]["diagonal"].'</td>
           <td class="service">'.$result[$i]["dnp"].'</td>
            <td class="service">'.$result[$i]["dv"].'</td>

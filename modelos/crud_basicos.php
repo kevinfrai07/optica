@@ -30,12 +30,12 @@ require_once "conexion.php";
 			$sql6=$this->conexion->query("INSERT INTO factura VALUES('$id_basicos', '$id_especificos', '$id_observaciones')");
 			
 			
-			echo "exitoso";
+			
 
 
-			/*echo "<script >alert('Datos enviados con éxito');
+			echo "<script >alert('Datos enviados con éxito');
 					window.location='../index.php';
-					</script>"; */
+					</script>"; 
 
 
 				}

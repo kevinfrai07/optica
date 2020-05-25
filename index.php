@@ -7,9 +7,7 @@
 	require_once 'diseno/estilos.php';
 	?>
 	
-	<?php 
-	echo date_default_timezone_set('America/Bogota');
-	 ?>
+	
 
 	<meta charset="UTF-8">
 	<title>Home</title>
