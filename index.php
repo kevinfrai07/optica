@@ -219,7 +219,7 @@
 									<div class="col-6" style="background-color: #e9ecef;opacity: 0.8">
 										<div class="form-row">
 											<div class="form-group col-md-3">
-												<label for="">Fecha</label>
+												<label for="">Horizontal</label>
 												<input type="text" name="fecha1" class="form-control" placeholder="Horizontal">
 											</div>
 											<div class="form-group col-md-3">
