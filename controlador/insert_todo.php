@@ -3,9 +3,9 @@
 	require_once("../modelos/crud_basicos.php");
 
 	if (isset($_POST['btnEnviar'])) {
-		
-		$fecha=date('yyyy-mm-dd');
-		$hora=date('hh-mm-ss');
+		date_default_timezone_set('America/Bogota');
+		$fecha=date('o-m-d');
+		$hora=date('h:i:s a');
 		$diligenciador=$_POST['diligenciador'];
 		$comprador=$_POST['comprador'];
 		$empresa=$_POST['empresa'];
@@ -44,6 +44,9 @@
 		$pant=$_POST['pant'];
 		$observaciones=$_POST['observaciones'];
 		$otras_observaciones=$_POST['otras_observaciones'];
+
+
+		
 		//terminan los terceros datos
 
 		//nombre de la clase

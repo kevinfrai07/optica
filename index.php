@@ -7,6 +7,9 @@
 	require_once 'diseno/estilos.php';
 	?>
 	
+	<?php 
+	echo date_default_timezone_set('America/Bogota');
+	 ?>
 
 	<meta charset="UTF-8">
 	<title>Home</title>
@@ -301,6 +304,26 @@
 						<img class="imgenviar" src="imagenes/logos/enviar.png" alt="">
 					</button>
 				</div>
+				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h2 class="text-center">Alerta!</h2>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<h3 class="text-center">Desea Enviar el Formulario</h3>
+							</div>
+							<div class="modal-footer">
+								<input type="submit" name="btnEnviar" value="Aceptar" class="btn btn-primary" >
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+
+							</div>
+						</div>
+					</div>
+				</div><!--termina cuerpo boton alerta-->
 			</form><!--termina el unico form-->
 		</div>
 	</div>
@@ -330,23 +353,3 @@
 </div>
 <!--termina cuerpo boton alerta-->
 <!-- cuerpo del boton alerta -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h2 class="text-center">Alerta!</h2>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<h3 class="text-center">Desea Enviar el Formulario</h3>
-			</div>
-			<div class="modal-footer">
-				<input type="submit" name="btnEnviar" value="Aceptar" class="btn btn-primary" >
-				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-
-			</div>
-		</div>
-	</div>
-			</div><!--termina cuerpo boton alerta-->
