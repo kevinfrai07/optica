@@ -30,7 +30,7 @@
 		$tipo_talla=$_POST['tipo_talla'];
 		//terminan los segndos datos 
 
-		$fecha1=$_POST['fecha1'];
+		$fecha1=$_POST['horizontal'];
 		$diagonal=$_POST['diagonal'];
 		$dnp=$_POST['dnp'];
 		$dv=$_POST['dv'];

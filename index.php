@@ -38,7 +38,7 @@
 			<div class="col-md-8">
 				<h2 class="text-center">Relizar pedido</h2>
 				<!--boton ayuda-->
-				<div class="float-right btnup">
+				<div class="float-right btnup" style="min-width: 174px; margin-top: -46px !important;">
 					<button type="button" class="btn" data-toggle="modal" data-target="#ayuda">
 						<img class="imgayuda" src="imagenes/logos/ayuda.png" alt="">
 					</button>
@@ -66,17 +66,25 @@
 								<div class="container-fluid" id="color-container-acordeon">
 									<div class="form-row">
 										<div class="form-group col-md-2">
+											<label for="">Fecha</label>
+											<input type="text" name="" class="form-control" value="<?php echo date('o-m-d'); ?>" disabled="">
+										</div>
+										<div class="form-group col-md-2">
+											<label for="">Hora*</label>
+											<input type="text"  class="form-control" disabled="" value="<?php echo date('h:i:s a'); ?>">
+										</div>
+										<div class="form-group col-md-3">
 											<label for="">Digilenciador*</label>
-											<input type="text" name="diligenciador" class="form-control" placeholder="Digilenciador">
+											<input type="text" name="diligenciador" class="form-control" placeholder="Digilenciador" required="">
 										</div>
 
-										<div class="form-group col-md-2">
+										<div class="form-group col-md-3">
 											<label for="">Comprador*</label>
 											<input type="text" class="form-control" name="comprador" required="" placeholder="Comprador">
 
 										</div>
 
-										<div class="form-group col-md-3">
+										<div class="form-group col-md-2">
 											<label for="inputPassword4">Empresa*</label>
 											<input type="text" class="form-control" name="empresa" required="" placeholder="Empresa">
 										</div>
@@ -89,7 +97,7 @@
 											<input type="text" class="form-control"  name="direccion" required="" placeholder="Dirección">
 										</div>
 
-										<div class="form-group col-md-3">
+										<div class="form-group col-md-4">
 											<label for="">Correo electrónico*</label>
 											<input type="email" class="form-control"  name="correo" required="" placeholder="Correo electrónico">
 										</div>
@@ -214,11 +222,11 @@
 									</div>
 									<!-- fin container unido 1 -->
 									<!-- container unido 2     -->
-									<div class="col-6" style="background-color: #e9ecef;opacity: 0.8">
+									<div class="col-6" style="border-left-style: ridge; background-color: #e9ecef;opacity: 0.8">
 										<div class="form-row">
 											<div class="form-group col-md-3">
-												<label for="">Fecha</label>
-												<input type="text" name="fecha1" class="form-control" placeholder="Horizontal">
+												<label for="">Horizontal</label>
+												<input type="text" name="horizontal" class="form-control" placeholder="Horizontal">
 											</div>
 											<div class="form-group col-md-3">
 												<label for="">Diagonal</label>

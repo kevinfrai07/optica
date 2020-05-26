@@ -106,7 +106,7 @@ $plantilla = '<body>
      <table>
       <thead>
         <tr>
-          <th class="service">Fecha</th>
+          <th class="service">Horizontal</th>
           <th class="service">Diagonal</th>
           <th class="service">DNP</th>
           <th class="service">DV</th>
@@ -120,7 +120,7 @@ $plantilla = '<body>
       for ($i=0; $i <count($result) ; $i++) { 
     
        $plantilla .='<tr>
-          <td class="service">'.$result[$i]["fecha1"].'</td>
+          <td class="service">'.$result[$i]["horizontal"].'</td>
           <td class="service">'.$result[$i]["diagonal"].'</td>
           <td class="service">'.$result[$i]["dnp"].'</td>
            <td class="service">'.$result[$i]["dv"].'</td>
