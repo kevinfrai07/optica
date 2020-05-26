@@ -50,7 +50,7 @@ require_once '../diseno/estilos_2.php';
   ?>
 </tbody>
 </table>
-<a href="../index.php"><button class="btn btn-danger">Volver </button></a>
+<a href="../index2.php"><button class="btn btn-danger">Volver </button></a>
 </div>
 <script src="../diseno/jquery/jquery-3.3.1.min.js"></script>
 <script src="../diseno/popper/popper.min.js"></script>

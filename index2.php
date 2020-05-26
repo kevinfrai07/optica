@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="diseno/css/styles.css">
 	<link rel="stylesheet" href="diseno/fontawesome/css/all.css">
 	<?php 
+		date_default_timezone_set('America/Bogota');
 	require_once 'diseno/estilos.php';
 	?>
 	
