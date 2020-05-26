@@ -2,6 +2,7 @@
 require_once '../diseno/estilos_2.php';
 
 ?>
+<link rel="icon" href="../imagenes/logos/2.jpg">
 <link rel="stylesheet" href="..diseno/css/styles.css">
 <link rel="stylesheet" href="../diseno/fontawesome/css/all.css">
 <link rel="stylesheet" href="../diseno/datatables/datatables.min.css">

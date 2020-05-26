@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="icon" href="imagenes/logos/2.jpg">
 	<link rel="stylesheet" href="diseno/css/styles.css">
 	<link rel="stylesheet" href="diseno/fontawesome/css/all.css">
 	<?php 
@@ -10,7 +11,7 @@
 	
 
 	<meta charset="UTF-8">
-	<title>Home</title>
+	<title>Óptica</title>
 	
 
 

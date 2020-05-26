@@ -27,11 +27,11 @@ $plantilla = '<body>
     <table>
       <thead>
         <tr>
-          <th class="service">ESF1</th>
-          <th class="service">CIL1</th>
-          <th class="service">EJE1</th>
-          <th class="service">ADD1</th>
-          <th class="service">Tipo de lente1</th> 
+          <th class="service">ESF</th>
+          <th class="service">CIL</th>
+          <th class="service">EJE</th>
+          <th class="service">ADD</th>
+          <th class="service">Tipo de lente</th> 
         </tr>
       </thead>
       <tbody>';
@@ -55,11 +55,11 @@ $plantilla = '<body>
     <table>
       <thead>
         <tr>
-          <th class="service">ESF2</th>
-          <th class="service">CIL2</th>
-          <th class="service">EJE2</th>
-          <th class="service">ADD2</th>
-          <th class="service">Tipo de lente2</th>
+          <th class="service">ESF</th>
+          <th class="service">CIL</th>
+          <th class="service">EJE</th>
+          <th class="service">ADD</th>
+          <th class="service">Tipo de lente</th>
         </tr>
       </thead>
       <tbody>';
@@ -68,11 +68,11 @@ $plantilla = '<body>
       for ($i=0; $i <count($result) ; $i++) { 
       
        $plantilla .='<tr>
-          <td class="service">'.$result[$i]["esf1"].'</td>
-          <td class="service">'.$result[$i]["cil1"].'</td>
-          <td class="service">'.$result[$i]["eje1"].'</td>
-          <td class="service">'.$result[$i]["add1"].'</td>
-          <td class="service">'.$result[$i]["tipo_lente1"].'</td>
+          <td class="service">'.$result[$i]["esf2"].'</td>
+          <td class="service">'.$result[$i]["cil2"].'</td>
+          <td class="service">'.$result[$i]["eje2"].'</td>
+          <td class="service">'.$result[$i]["add2"].'</td>
+          <td class="service">'.$result[$i]["tipo_lente2"].'</td>
         </tr>';
         }
       $plantilla .='</tbody>
@@ -86,6 +86,8 @@ $plantilla = '<body>
           <th class="service">Filtro</th>
           <th class="service">Montadura</th>
           <th class="service">Tipo de talla</th>
+          <th class="service">Horizontal</th>
+          <th class="service">Diagonal</th>
         </tr>
       </thead>
       <tbody>';
@@ -96,6 +98,8 @@ $plantilla = '<body>
           <td class="service">'.$result[$i]["filtro"].'</td>
           <td class="service">'.$result[$i]["montadura"].'</td>
           <td class="service">'.$result[$i]["tipo_talla"].'</td>
+          <td class="service">'.$result[$i]["horizontal"].'</td>
+          <td class="service">'.$result[$i]["diagonal"].'</td>
         </tr>';
         }
       $plantilla .='</tbody>
@@ -106,12 +110,13 @@ $plantilla = '<body>
      <table>
       <thead>
         <tr>
-          <th class="service">Horizontal</th>
-          <th class="service">Diagonal</th>
+          
           <th class="service">DNP</th>
           <th class="service">DV</th>
           <th class="service">Filtro</th>
           <th class="service">Vertical</th>
+          <th class="service">Puente</th>
+          <th class="service">Altura focal</th>
 
         </tr>
       </thead>
@@ -120,20 +125,14 @@ $plantilla = '<body>
       for ($i=0; $i <count($result) ; $i++) { 
     
        $plantilla .='<tr>
-<<<<<<< HEAD
-          <td class="service">'.$result[$i]["horizontal"].'</td>
-=======
-<<<<<<< HEAD
-          <td class="service">'.$result[$i]["horizontal"].'</td>
-=======
-          <td class="service">'.$result[$i]["fecha1"].'</td>
->>>>>>> 3e4cf87ea7b2581421d82fffda947bef64d3c97e
->>>>>>> e4fb1e69534b3dc5f7da3d98ad393a7f30e7fecc
-          <td class="service">'.$result[$i]["diagonal"].'</td>
           <td class="service">'.$result[$i]["dnp"].'</td>
-           <td class="service">'.$result[$i]["dv"].'</td>
-           <td class="service">'.$result[$i]["filtro"].'</td>
-           <td class="service">'.$result[$i]["vertical"].'</td>
+          <td class="service">'.$result[$i]["dv"].'</td>
+          <td class="service">'.$result[$i]["filtro2"].'</td>
+          <td class="service">'.$result[$i]["vertical"].'</td>
+          <td class="service">'.$result[$i]["puente"].'</td>
+          <td class="service">'.$result[$i]["altrura_focal"].'</td>
+          
+           
         </tr>';
         }
       $plantilla .='</tbody>
@@ -144,28 +143,24 @@ $plantilla = '<body>
     <table>
       <thead>
         <tr>
-          <th>Puente</th>
-          <th>Altura focal</th>
-          <th>DT</th>
-          <th>Color</th>
-          <th>D.T.Trabajo</th>
-          <th>Pant</th>
-          <th>Observaciones</th>
-          <th>Otras observaciones</th>
+          <th class="service">DT</th>
+          <th class="service">Color</th>
+          <th class="service">D.T.Trabajo</th>
+          <th class="service">Pant</th>
+          <th class="service">Observaciones</th>
+          <th class="service">Otras observaciones</th>
         </tr>
       </thead>
       <tbody>';
       for ($i=0; $i <count($result) ; $i++) { 
     
        $plantilla .='<tr>
-          <td >'.$result[$i]["puente"].'</td>
-          <td >'.$result[$i]["altrura_focal"].'</td>
-          <td >'.$result[$i]["dt"].'</td>
-          <td >'.$result[$i]["color"].'</td>
-          <td >'.$result[$i]["dtrabajo"].'</td>
-          <td >'.$result[$i]["pant"].'</td>
-          <td >'.$result[$i]["observaciones"].'</td>
-          <td >'.$result[$i]["otras_observaciones"].'</td>
+          <td class="service">'.$result[$i]["dt"].'</td>
+          <td class="service">'.$result[$i]["color"].'</td>
+          <td class="service">'.$result[$i]["dtrabajo"].'</td>
+          <td class="service">'.$result[$i]["pant"].'</td>
+          <td class="service">'.$result[$i]["observaciones"].'</td>
+          <td class="service">'.$result[$i]["otras_observaciones"].'</td>
         </tr>';
         }
       $plantilla .='</tbody>
