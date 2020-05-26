@@ -226,11 +226,11 @@
 										<div class="form-row">
 											<div class="form-group col-md-3">
 												<label for="">Horizontal</label>
-<<<<<<< HEAD
+
 												<input type="text" name="horizontal" class="form-control" placeholder="Horizontal">
-=======
-												<input type="text" name="fecha1" class="form-control" placeholder="Horizontal">
->>>>>>> e4fb1e69534b3dc5f7da3d98ad393a7f30e7fecc
+
+												
+
 											</div>
 											<div class="form-group col-md-3">
 												<label for="">Diagonal</label>
